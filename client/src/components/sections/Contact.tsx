@@ -32,17 +32,18 @@ export function Contact() {
   return (
     <AnimatedSection id="contact" className="relative">
       {/* Abstract background */}
-      <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-primary/5 rounded-full mix-blend-screen filter blur-[100px] -z-10"></div>
+      <div className="absolute top-0 right-0 w-[40rem] bg-primary/5 rounded-full mix-blend-screen filter blur-[100px] -z-10"></div>
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          
+
           <SlideIn direction="right">
             <div>
-              <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Let's build something <span className="text-primary">together.</span></h2>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Let’s Build Scalable Solutions  <span className="text-primary">Together.</span></h2>
               <p className="text-lg text-muted-foreground mb-12">
-                Currently open for new opportunities. Whether you have a question, a project idea, or just want to say hi, I'll try my best to get back to you!
-              </p>
+                I’m currently open to backend development opportunities, freelance projects,
+                and collaborative technical challenges. If you’re looking for a developer who
+                can design secure APIs, optimize databases, and build scalable server-side systems — let’s connect.              </p>
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4 group">
@@ -51,7 +52,13 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-medium">contact@sreenath.dev</p>
+                    {/* <p className="font-medium">teamhub78@gmail.com</p> */}
+                    <a
+                      href="mailto:teamhub78@gmail.com"
+                      className="font-medium hover:text-accent transition-colors"
+                    >
+                      teamhub78@gmail.com
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 group">
@@ -61,6 +68,9 @@ export function Contact() {
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
                     <p className="font-medium">Bangalore, India</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Available for remote & on-site opportunities
+                    </p>
                   </div>
                 </div>
               </div>
@@ -70,7 +80,7 @@ export function Contact() {
           <SlideIn direction="left" delay={0.2}>
             <div className="glass-card p-8 rounded-3xl">
               <h3 className="text-2xl font-bold mb-6">Send me a message</h3>
-              
+
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -101,7 +111,7 @@ export function Contact() {
                       )}
                     />
                   </div>
-                  
+
                   <FormField
                     control={form.control}
                     name="message"
@@ -109,10 +119,10 @@ export function Contact() {
                       <FormItem>
                         <FormLabel className="text-muted-foreground">Your Message</FormLabel>
                         <FormControl>
-                          <Textarea 
-                            placeholder="Tell me about your project..." 
-                            className="bg-background/50 border-white/10 min-h-[150px] resize-none focus-visible:ring-primary/50" 
-                            {...field} 
+                          <Textarea
+                            placeholder="Tell me about your project..."
+                            className="bg-background/50 border-white/10 min-h-[150px] resize-none focus-visible:ring-primary/50"
+                            {...field}
                           />
                         </FormControl>
                         <FormMessage />
@@ -120,12 +130,12 @@ export function Contact() {
                     )}
                   />
 
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     disabled={isPending}
                     className="w-full h-14 text-base bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl group hover-elevate"
                   >
-                    {isPending ? "Sending..." : "Send Message"} 
+                    {isPending ? "Sending..." : " Start a Conversation →"}
                     {!isPending && <Send size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />}
                   </Button>
                 </form>

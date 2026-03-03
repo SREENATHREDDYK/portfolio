@@ -15,7 +15,7 @@ export const api = {
   messages: {
     create: {
       method: "POST" as const,
-      path: "/api/messages" as const,
+      path: "/api/contact" as const,
       input: insertMessageSchema,
       responses: {
         201: z.custom<typeof messages.$inferSelect>(),

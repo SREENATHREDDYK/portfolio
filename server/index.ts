@@ -3,13 +3,16 @@ import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 
+import dotenv from "dotenv";
+dotenv.config();
+
 const app = express();
 const httpServer = createServer(app);
 
 declare module "http" {
   interface IncomingMessage {
     rawBody: unknown;
-  }
+  } 
 }
 
 app.use(

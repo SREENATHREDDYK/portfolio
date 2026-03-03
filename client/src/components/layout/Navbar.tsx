@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 const navItems = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
+  { name: "Technical Skills", href: "#Technical Skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
@@ -24,11 +25,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
-        isScrolled 
-          ? "bg-background/80 backdrop-blur-md border-white/5 py-4 shadow-lg" 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${isScrolled
+          ? "bg-background/80 backdrop-blur-md border-white/5 py-4 shadow-lg"
           : "bg-transparent border-transparent py-6"
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
@@ -43,14 +43,14 @@ export function Navbar() {
           <nav className="hidden md:flex items-center gap-8">
             <ul className="flex items-center gap-6">
               {navItems.map((item, i) => (
-                <motion.li 
+                <motion.li
                   key={item.name}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <a 
-                    href={item.href} 
+                  <a
+                    href={item.href}
                     className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-primary after:transition-all hover:after:w-full"
                   >
                     {item.name}
@@ -70,7 +70,7 @@ export function Navbar() {
           </nav>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="md:hidden p-2 text-muted-foreground hover:text-foreground"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
@@ -81,7 +81,7 @@ export function Navbar() {
 
       {/* Mobile Nav */}
       {mobileMenuOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
@@ -89,9 +89,9 @@ export function Navbar() {
         >
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             {navItems.map((item) => (
-              <a 
+              <a
                 key={item.name}
-                href={item.href} 
+                href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-2 text-base font-medium text-muted-foreground hover:text-primary transition-colors"
               >

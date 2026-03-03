@@ -21,27 +21,34 @@ export function Hero() {
             Available for new opportunities
           </motion.div>
 
-          <motion.h1 
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold leading-tight tracking-tighter mb-6"
+          <motion.h1
+            className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent text-glow">Sreenath</span>.<br />
-            Node.js Backend Developer.
+            Hi, I'm{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent text-glow">
+              Sreenath
+            </span>.
+            <br />
+            Backend Engineer specializing in scalable and secure API architecture.
           </motion.h1>
 
-          <motion.p 
+          <motion.p
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            I architect and build scalable, secure, and robust server-side applications. 
-            Currently engineering high-performance solutions at <span className="text-foreground font-medium">Aimwindow Info Tech</span>.
+            I design and build secure, high-performance backend systems using Node.js, Express, MongoDB, and PostgreSQL.
+             Currently contributing to production-grade applications at{" "}
+            <span className="text-foreground font-medium">
+              Aimwindow Info Tech
+            </span>
           </motion.p>
 
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,7 +65,7 @@ export function Hero() {
           </motion.div>
 
           {/* Tech Stack Pills */}
-          <motion.div 
+          <motion.div
             className="mt-20 pt-10 border-t border-white/5 grid grid-cols-2 md:grid-cols-4 gap-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -81,9 +88,10 @@ export function Hero() {
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2 text-green-400">
                 <Code2 size={20} />
-                <span className="font-mono text-sm font-semibold">Stack</span>
+                <span className="font-mono text-sm font-semibold">Architecture</span>
               </div>
-              <p className="text-sm text-muted-foreground">MERN (Kodenest Certified)</p>
+              <p className="text-sm text-muted-foreground">
+                REST APIs, RBAC, Real-Time Systems</p>
             </div>
           </motion.div>
         </div>

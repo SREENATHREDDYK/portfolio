@@ -12,7 +12,7 @@ export function AnimatedSection({ children, className = "", id, delay = 0 }: Ani
   return (
     <motion.section
       id={id}
-      className={`py-24 md:py-32 ${className}`}
+      className={`py-24 md:py-14 ${className}`}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}

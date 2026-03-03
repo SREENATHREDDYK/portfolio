@@ -10,23 +10,23 @@
     --font-body: 'Plus Jakarta Sans', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 
-    /* Enforcing a Dark Tech Theme */
-    --background: 230 25% 4%;
+    /* Slightly lighter dark base */
+    --background: 230 25% 10%;
     --foreground: 210 40% 98%;
 
-    --card: 230 25% 6%;
+    --card: 230 25% 14%;
     --card-foreground: 210 40% 98%;
     
-    --popover: 230 25% 6%;
+    --popover: 230 25% 14%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 190 90% 50%; /* Electric Cyan */
     --primary-foreground: 230 25% 4%;
 
-    --secondary: 230 20% 12%;
+    --secondary: 230 20% 18%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 230 20% 12%;
+    --muted: 230 20% 18%;
     --muted-foreground: 215 20% 65%;
 
     --accent: 270 70% 60%; /* Purple accent */
@@ -35,8 +35,8 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 230 20% 12%;
-    --input: 230 20% 12%;
+    --border: 230 20% 20%;
+    --input: 230 20% 20%;
     --ring: 190 90% 50%;
 
     --radius: 0.75rem;
