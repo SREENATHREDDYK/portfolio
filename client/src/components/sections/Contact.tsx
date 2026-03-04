@@ -1,3 +1,5 @@
+"use client"
+
 import { AnimatedSection, SlideIn } from "../AnimatedSection";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -8,9 +10,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Send, MapPin, Mail, Phone } from "lucide-react";
+import { useState } from "react";
 
 export function Contact() {
   const { mutate: sendMessage, isPending } = useCreateMessage();
+  const [successMessage, setSuccessMessage] = useState<string | null>("");
 
   const form = useForm<MessageInput>({
     resolver: zodResolver(api.messages.create.input),
@@ -25,6 +29,7 @@ export function Contact() {
     sendMessage(data, {
       onSuccess: () => {
         form.reset();
+        setSuccessMessage("Thanks for reaching out! I'll get back to you soon.");
       },
     });
   }
@@ -129,6 +134,11 @@ export function Contact() {
                       </FormItem>
                     )}
                   />
+                  {successMessage &&
+                    <div className="p-4 bg-green-100 text-green-800 rounded-md">
+                      {successMessage}
+                    </div>
+                  }
 
                   <Button
                     type="submit"

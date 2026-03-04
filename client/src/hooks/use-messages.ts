@@ -24,12 +24,12 @@ export function useCreateMessage() {
 
       return api.messages.create.responses[201].parse(await res.json());
     },
-    onSuccess: () => {
-      toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
-      });
-    },
+    // onSuccess: () => {
+    //   toast({
+    //     title: "Message sent!",
+    //     description: "Thanks for reaching out. I'll get back to you soon.",
+    //   });
+    // },
     onError: (error) => {
       toast({
         title: "Error sending message",
