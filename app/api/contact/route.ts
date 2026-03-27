@@ -44,7 +44,7 @@ export async function POST(request: Request) {
         input.message,
       ].join("\n"),
       html: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+        <div style=" line-height: 1.6;">
           <h2 style="color:#0ea5e9;">New Portfolio Contact</h2>
           <p><strong>Name:</strong> ${input.name}</p>
           <p>
