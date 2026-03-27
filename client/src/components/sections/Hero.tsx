@@ -18,7 +18,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary border border-white/5 text-sm text-muted-foreground mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            Available for new opportunities
+            Available for new opportunitiesssss
           </motion.div>
 
           <motion.h1
