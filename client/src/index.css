@@ -86,3 +86,12 @@
 html {
   scroll-behavior: smooth;
 }
+.text-glow {
+  text-shadow: 0 0 20px rgba(var(--primary-rgb), 0.3);
+}
+
+/* If you're using CSS variables, add this to your :root */
+:root {
+  --primary-rgb: 59, 130, 246;
+  --accent-rgb: 168, 85, 247;
+}

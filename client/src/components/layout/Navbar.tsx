@@ -32,12 +32,14 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-              <Terminal size={20} strokeWidth={2.5} />
-            </div>
-            <span className="font-display font-bold text-xl tracking-tight">Sreenath<span className="text-primary">.</span></span>
-          </a>
+        <a href="#" className="flex items-center gap-2 group">
+  <div className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+    <span className="font-bold text-sm">SR</span>
+  </div>
+  <span className="font-display font-bold text-xl tracking-tight group-hover:text-primary transition-colors">
+    Sreenath Reddy
+  </span>
+</a>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
